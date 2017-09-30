@@ -64,10 +64,10 @@ class TaiyakiTest < Minitest::Test
     # 当日なら食べられる
     refute taiyaki.expired?
 
-    # 3日まで食べられる
+    # 3日目まで食べられる
     refute taiyaki.expired?(Date.today + 3)
 
-    # 4日を過ぎると食べられない
+    # 4日目を過ぎると食べられない
     assert taiyaki.expired?(Date.today + 4)
   end
 end
